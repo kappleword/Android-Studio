@@ -1,5 +1,6 @@
 package com.example.workout2021_step1;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,12 @@ public class WorkoutListFragment extends ListFragment {
     }
     private Listener listener = null;
     //운동제목에 클릭에 응답하기
+    //부모에 담긴 프래그먼트 이므로 부모를 통해서 정보공유/접근
+    public void onAttach(Context context){
+        super.onAttach(context);
+        this.listener = (Listener) context;
+    }
+    //운동제목 클릭에 응답하기
     public void onListItemClick(ListView listView, View itemView, int position, long id){
         if(listener != null){
             listener.itemClicked(id);
