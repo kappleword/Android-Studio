@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_login"
+            android:title="@string/nav_login"
+            android:checked="true" />
+        <item
+            android:id="@+id/nav_raid"
+            android:title="@string/nav_raid"
+            android:checked="true" />
+        <item
+            android:id="@+id/nav_chaos"
+            android:title="@string/nav_chaos"
+            android:checked="true" />
+        <item
+            android:id="@+id/nav_bus"
+            android:title="@string/nav_bus"
+            android:checked="true" />
+    </group>
+        <item android:title="보상">
+            <menu>
+                <item android:id="@+id/nav_gold"
+                    android:title="@string/nav_gold" />
+                <item android:id="@+id/nav_item"
+                    android:title="@string/nav_item" />
+
+            </menu>
+        </item>
+</menu>
