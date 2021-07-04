@@ -1,17 +1,24 @@
 package com.example.terrgym80;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.material.navigation.NavigationView;
+
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     FragmentManager fragmentManager = getSupportFragmentManager();
 
     @Override
@@ -42,11 +49,9 @@ public class MainActivity extends AppCompatActivity {
                         ,R.string.nav_close_drawer);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content_frame, LoginFragment.class, null)
-                .setReorderingAllowed(true)
-                .addToBackStack(null)
-                .commit();
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        //이벤트 소스와 이벤트 핸들러 연결
+        navigationView.setNavigationItemSelectedListener(this);
     }
     @Override//부모클래스로부터 재정의
     protected void onStart(){
@@ -57,5 +62,45 @@ public class MainActivity extends AppCompatActivity {
         Log.i(this.getClass().getName(),"resList"+v);
         Intent intent = new Intent(this, ResListActivity.class);
         startActivity(intent);//다른 액티비티로 화면 이동
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        //어떤 메뉴 아이템을 선택했나?
+        int id= item.getItemId();
+        Log.i(this.getClass().getName(),"선택한 메뉴의 id값은 ===>"+id);
+        Fragment fragment = null;
+        Activity activity = null;
+        Intent intent = null;
+        switch (id){
+            case R.id.nav_chaos:
+                fragment = new PtFragment();
+                break;
+            case R.id.nav_raid:
+                fragment = new YogaFragment();
+                break;
+            case R.id.nav_bus:
+                fragment = new SpinningFragment();
+                break;
+            case R.id.nav_login:
+                intent = new Intent(this, LoginActivity.class);
+                break;
+            case R.id.nav_help:
+                intent = new Intent(this, LoginActivity.class);
+                break;
+            case R.id.nav_map:
+                intent = new Intent(this, LoginActivity.class);
+                break;
+            default: break;
+        }
+        if(fragment !=null){//선태한 메뉴아이템이 프래그먼트야?
+            getSupportFragmentManager().beginTransaction().
+                    replace(R.id.content_frame, fragment).commit();
+        }else {//선태한 메뉴아이템이 액티비티인거야?
+            startActivity(intent);
+        }
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }

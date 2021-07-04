@@ -20,10 +20,10 @@
     </group>
         <item android:title="보상">
             <menu>
-                <item android:id="@+id/nav_gold"
-                    android:title="@string/nav_gold" />
-                <item android:id="@+id/nav_item"
-                    android:title="@string/nav_item" />
+                <item android:id="@+id/nav_help"
+                    android:title="@string/nav_help" />
+                <item android:id="@+id/nav_map"
+                    android:title="@string/nav_map" />
 
             </menu>
         </item>

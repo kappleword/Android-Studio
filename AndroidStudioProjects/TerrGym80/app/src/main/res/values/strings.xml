@@ -6,8 +6,8 @@
     <string name="nav_raid">레이드</string>
     <string name="nav_chaos">카던</string>
     <string name="nav_bus">버스</string>
-    <string name="nav_gold">골드</string>
-    <string name="nav_item">아이템</string>
+    <string name="nav_help">도움</string>
+    <string name="nav_map">지도</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="nav_open_drawer">Open navigation drawer</string>
     <string name="nav_close_drawer">Close navigation drawer</string>
