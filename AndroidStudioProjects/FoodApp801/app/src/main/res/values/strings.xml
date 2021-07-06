@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">먹자골목</string>
+    <string name="home">Home</string>
+    <string name="home_text">Since we opened our doors in 2017,
+        Bits and Pizzas has built its reputation as one of
+        America`s best Italian-Digital restaurants.
+        Some people believe eating out is about being with your friends and family.
+        We believe that good food is best enjoyed while staring at your phone.
+    </string>
+    <string name="pizza">Pizza</string>
+    <string name="pasta">Pasta</string>
+    <string name="store">Store</string>
+    <string name="company_name">See Pizza</string>
+    <string-array name="pizza">
+        <item>치즈</item>
+        <item>페퍼로니</item>
+        <item>포테이토</item>
+    </string-array>
+    <string-array name="pasta">
+        <item>봉골레</item>
+        <item>까르보나라</item>
+        <item>로제</item>
+    </string-array>
+    <string-array name="store">
+    <item>닐리</item>
+    <item>비스트로</item>
+    <item>파스타</item>
+    </string-array>
+</resources>
