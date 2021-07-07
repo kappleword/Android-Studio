@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/paprikapicture"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:src="@drawable/paprika" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/borderline"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:hint="아이디"/>
+    <EditText
+        android:id="@+id/et_pw"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/borderline"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:hint="비밀번호"/>
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:text="로그인 버튼"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_design" />
+
+</LinearLayout>
