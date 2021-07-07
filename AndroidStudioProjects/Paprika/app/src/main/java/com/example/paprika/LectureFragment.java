@@ -2,17 +2,18 @@ package com.example.paprika;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
-public class HomeFragment extends Fragment {
+
+public class LectureFragment extends Fragment {
 
     MainActivity activity;
     @Override
@@ -33,19 +34,12 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //프래그먼트 메인을 인플레이트해주고 컨테이너에 붙여달라는 뜻임
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_home , container, false);
-        Button button = rootView.findViewById(R.id.btn_homeSchedule);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_lecture , container, false);
+        Button button = rootView.findViewById(R.id.btn_lectureToeLearning);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.onFragmentChange(2);
-            }
-        });
-        Button button1 = rootView.findViewById(R.id.btn_homeCourse);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                activity.onFragmentChange(3);
+                activity.onFragmentChange(5);
             }
         });
         return rootView;

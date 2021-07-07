@@ -2,24 +2,24 @@ package com.example.paprika;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
+
+//프래그먼트는 액티비티위에 올라가있을떄만 프래그먼트로서 동작할 수 있다.
 public class LoginFragment extends Fragment {
-    MainActivity activity;
 
+    MainActivity activity;
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-//이 메소드가 호출될떄는 프래그먼트가 엑티비티위에 올라와있는거니깐 get Activity 메소드로 엑티비티참조가능
+//이 메소드가 호출될떄는 프래그먼트가 엑티비티위에 올라와있는거니깐 getActivity 메소드로 엑티비티참조가능
         activity = (MainActivity) getActivity();
     }
 
@@ -34,7 +34,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //프래그먼트 메인을 인플레이트해주고 컨테이너에 붙여달라는 뜻임
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_login, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_login , container, false);
         Button button = rootView.findViewById(R.id.btn_login);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

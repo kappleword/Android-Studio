@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="30dp"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btn_homeSchedule"
+        android:background="@drawable/scheduleicon"
+        android:layout_width="150dp"
+        android:layout_height="150dp">
+    </Button>
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-</FrameLayout>
+        android:layout_below="@id/btn_homeSchedule"
+        android:layout_marginLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="시간표"
+        android:textSize="25sp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/btn_homeCourse"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/courseicon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_toRightOf="@id/btn_homeSchedule"/>
+    <TextView
+        android:layout_below="@id/btn_homeSchedule"
+        android:layout_marginLeft="227dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="강좌목록"
+        android:textSize="25sp"
+        android:gravity="center"/>
+    <Button
+        android:layout_marginTop="50dp"
+        android:id="@+id/btn_empty"
+        android:background="@drawable/button_design"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/btn_homeSchedule"/>
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/button_design"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/btn_homeSchedule"
+        android:layout_toRightOf="@id/btn_empty"/>
+</RelativeLayout>

@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_main" />
+    <Button
+        android:id="@+id/button"
+        android:layout_marginLeft="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+        android:layout_alignParentTop="true"
+        android:text="Home" />
 
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar_main" />
-        <FrameLayout
-            android:id="@+id/container"
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button">
+    <fragment
+        android:name="com.example.paprika.LoginFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        <!--<fragment
+            android:id="@+id/MainFragment"
+            android:name="com.example.a82107.myfragment1.MainFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/button">
+            android:layout_height="match_parent" />-->
+    </FrameLayout>
 
-                <!--<fragment
-                    android:id="@+id/MainFragment"
-                    android:name="com.example.a82107.myfragment1.MainFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />-->
-        </FrameLayout>
-</LinearLayout>
+</RelativeLayout>
