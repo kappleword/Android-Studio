@@ -12,6 +12,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     //메세지 받는 메소드
     @Override
     public void onMessageReceived(RemoteMessage message){
+
         super.onMessageReceived(message);
     }
 }
