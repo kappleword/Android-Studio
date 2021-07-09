@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     CourseFragment fragmentCourse;
     LectureFragment fragmentLecture;
     eLearningFragment fragmenteLearning;
+    NaverFragment fragmentNaver;
+    DaumFragment fragmentDaum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentCourse = new CourseFragment();
         fragmentLecture = new LectureFragment();
         fragmenteLearning = new eLearningFragment();
-
+        fragmentNaver = new NaverFragment();
+        fragmentDaum = new DaumFragment();
 
         Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentLecture).commit();
         }else if(index == 5){
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmenteLearning).commit();
+        }else if(index == 6){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentNaver).commit();
+        }else if(index == 7){
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentDaum).commit();
         }
+
     }
 }

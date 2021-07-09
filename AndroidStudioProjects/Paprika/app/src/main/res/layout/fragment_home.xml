@@ -37,7 +37,7 @@
         android:gravity="center"/>
     <Button
         android:layout_marginTop="50dp"
-        android:id="@+id/btn_empty"
+        android:id="@+id/btn_naver"
         android:background="@drawable/button_design"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -45,9 +45,10 @@
     <Button
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
+        android:id="@+id/btn_daum"
         android:background="@drawable/button_design"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_below="@id/btn_homeSchedule"
-        android:layout_toRightOf="@id/btn_empty"/>
+        android:layout_toRightOf="@id/btn_naver"/>
 </RelativeLayout>

@@ -34,18 +34,32 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 //프래그먼트 메인을 인플레이트해주고 컨테이너에 붙여달라는 뜻임
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_home , container, false);
-        Button button = rootView.findViewById(R.id.btn_homeSchedule);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button buttonSchedule = rootView.findViewById(R.id.btn_homeSchedule);
+        buttonSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 activity.onFragmentChange(2);
             }
         });
-        Button button1 = rootView.findViewById(R.id.btn_homeCourse);
-        button1.setOnClickListener(new View.OnClickListener() {
+        Button buttonCourse = rootView.findViewById(R.id.btn_homeCourse);
+        buttonCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 activity.onFragmentChange(3);
+            }
+        });
+        Button buttonNaver = rootView.findViewById(R.id.btn_naver);
+        buttonNaver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onFragmentChange(6);
+            }
+        });
+        Button buttonDaum = rootView.findViewById(R.id.btn_daum);
+        buttonDaum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity.onFragmentChange(7);
             }
         });
         return rootView;
