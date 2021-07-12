@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "831453725052",
+    "firebase_url": "https://ktprojectpjh-login-default-rtdb.firebaseio.com",
+    "project_id": "ktprojectpjh-login",
+    "storage_bucket": "ktprojectpjh-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831453725052:android:96bdcbf8586b919a4664f9",
+        "android_client_info": {
+          "package_name": "com.example.ktprojectpjh_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831453725052-vg596v1jnf1f5ripu0k2l0k6vok9ht4h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUdajYNtr4Fs-bvKGdiYOa05MicbrvdAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831453725052-vg596v1jnf1f5ripu0k2l0k6vok9ht4h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
