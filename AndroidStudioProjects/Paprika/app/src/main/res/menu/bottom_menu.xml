@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuHome"
+        android:icon="@drawable/homeicon"
+        android:title="@string/ppHome"
+        android:enabled="true"
+        />
+
+    <item
+        android:id="@+id/menuSchedule"
+        android:icon="@drawable/scheduleicon"
+        android:title="@string/ppSchedule"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/menuCourse"
+        android:icon="@drawable/courseicon"
+        android:title="@string/ppCourse"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/menuImsi"
+        android:icon="@drawable/meicon"
+        android:title="임시"
+        android:enabled="true"
+        />
+
+</menu>

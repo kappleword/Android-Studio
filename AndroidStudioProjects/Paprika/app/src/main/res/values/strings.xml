@@ -2,4 +2,7 @@
     <string name="app_name">Paprika</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ppSchedule">시간표</string>
+    <string name="ppCourse">강좌목록</string>
+    <string name="ppHome">홈</string>
 </resources>

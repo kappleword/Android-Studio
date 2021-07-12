@@ -32,7 +32,7 @@ public class DaumFragment extends Fragment {
         webSettings.setSupportZoom(true);
         // Force links and redirects to open in the WebView instead of in a browser
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("http://192.168.219.100:7000/E_LearningPage.jsp");
+        mWebView.loadUrl("https://www.daum.net/");
         return view;
     }
 }

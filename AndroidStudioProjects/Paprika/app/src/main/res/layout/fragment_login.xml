@@ -10,6 +10,7 @@
 
     <ImageView
         android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
         android:id="@+id/paprikapicture"
         android:layout_width="match_parent"
         android:layout_height="270dp"

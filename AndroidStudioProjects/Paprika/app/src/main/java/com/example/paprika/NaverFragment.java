@@ -31,7 +31,7 @@ public class NaverFragment extends Fragment {
 
         // Force links and redirects to open in the WebView instead of in a browser
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("http://192.168.219.100:7000/schedule/getSchedule");
+        mWebView.loadUrl("https://www.naver.com/");
         return view;
     }
 }

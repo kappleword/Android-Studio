@@ -1,11 +1,16 @@
 package com.example.paprika;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,13 +23,14 @@ public class MainActivity extends AppCompatActivity {
     CourseFragment fragmentCourse;
     NaverFragment fragmentNaver;
     DaumFragment fragmentDaum;
-
+    BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 
         //프래그먼트는 뷰와 다르게 context를 매개변수로 넣어줄 필요가 없다.
         fragmentLogin = new LoginFragment();
@@ -45,24 +51,48 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();/*프래그먼트 매니저가 프래그먼트를 담당한다!*/
             }
         });
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        //처음화면
+        //getSupportFragmentManager().beginTransaction().add(R.id.main_frame, new Fragment1()).commit(); //FrameLayout에 fragment.xml 띄우기
+        //바텀 네비게이션뷰 안의 아이템 설정
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    //item을 클릭시 id값을 가져와 FrameLayout에 fragment.xml띄우기
+                    case R.id.menuHome:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
+                        break;
+                    case R.id.menuSchedule:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentSchedule).commit();
+                        break;
+                    case R.id.menuCourse:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentCourse).commit();
+                        break;
+                    case R.id.menuImsi:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentNaver).commit();
+                        break;
+                }
+                return true;
+            }
+        });
+
     }
 
     //프래그먼트와 프래그먼트끼리 직접접근을하지않는다. 프래그먼트와 엑티비티가 접근함
-    public void onFragmentChange(int index){
-        if(index == 0 ){
+    public void onFragmentChange(int index) {
+        if (index == 0) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentLogin).commit();
-        }else if(index == 1){
+        } else if (index == 1) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
-        }else if(index == 2){
+        } else if (index == 2) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentSchedule).commit();
-        }else if(index == 3){
+        } else if (index == 3) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentCourse).commit();
-        }else if(index == 6){
+        } else if (index == 6) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentNaver).commit();
-        }else if(index == 7){
+        } else if (index == 7) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentDaum).commit();
         }
-
     }
-
 }
