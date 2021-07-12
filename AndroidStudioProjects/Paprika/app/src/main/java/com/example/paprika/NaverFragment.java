@@ -18,8 +18,8 @@ public class NaverFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_daum, container, false);
-        WebView mWebView = view.findViewById(R.id.daum_web);
+        View view = inflater.inflate(R.layout.fragment_naver, container, false);
+        WebView mWebView = view.findViewById(R.id.naver_web);
         // Enable Javascript
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);

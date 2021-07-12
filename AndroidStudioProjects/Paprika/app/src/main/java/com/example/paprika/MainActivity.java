@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
     HomeFragment fragmentHome;
     ScheduleFragment fragmentSchedule;
     CourseFragment fragmentCourse;
-    LectureFragment fragmentLecture;
-    eLearningFragment fragmenteLearning;
     NaverFragment fragmentNaver;
     DaumFragment fragmentDaum;
 
@@ -33,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentHome = new HomeFragment();
         fragmentSchedule = new ScheduleFragment();
         fragmentCourse = new CourseFragment();
-        fragmentLecture = new LectureFragment();
-        fragmenteLearning = new eLearningFragment();
         fragmentNaver = new NaverFragment();
         fragmentDaum = new DaumFragment();
 
@@ -61,10 +57,6 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentSchedule).commit();
         }else if(index == 3){
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentCourse).commit();
-        }else if(index == 4){
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentLecture).commit();
-        }else if(index == 5){
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmenteLearning).commit();
         }else if(index == 6){
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentNaver).commit();
         }else if(index == 7){
@@ -72,4 +64,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 }

@@ -11,14 +11,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 public class ScheduleFragment extends Fragment {
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //프래그먼트 메뉴를 인플레이트해주고 컨테이너에 붙여달라는 뜻임
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_schedule, container, false);
-        return rootView;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_schedule, container, false);
+        WebView mWebView = view.findViewById(R.id.scheduleWebView);
+        // Enable Javascript
+        WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        // 화면 비율
+        webSettings.setUseWideViewPort(true);// wide viewport를 사용하도록 설정
+        // 웹뷰 멀티 터치 가능하게 (줌기능)
+        webSettings.setBuiltInZoomControls(true);// 줌 아이콘 사용
+        webSettings.setSupportZoom(true);
+
+        // Force links and redirects to open in the WebView instead of in a browser
+        mWebView.setWebViewClient(new WebViewClient());
+        mWebView.loadUrl("http://192.168.219.100:7000/schedule/getSchedule");
+        return view;
     }
 }
