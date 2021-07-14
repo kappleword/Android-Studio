@@ -25,9 +25,9 @@ public class ScheduleFragment extends Fragment {
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         // 화면 비율
-        webSettings.setUseWideViewPort(true);// wide viewport를 사용하도록 설정
+        //webSettings.setUseWideViewPort(true);// wide viewport를 사용하도록 설정
         // 웹뷰 멀티 터치 가능하게 (줌기능)
-        webSettings.setBuiltInZoomControls(true);// 줌 아이콘 사용
+        //webSettings.setBuiltInZoomControls(true);// 줌 아이콘 사용
         webSettings.setSupportZoom(true);
 
         // Force links and redirects to open in the WebView instead of in a browser

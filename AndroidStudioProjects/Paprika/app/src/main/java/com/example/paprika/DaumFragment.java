@@ -28,7 +28,7 @@ public class DaumFragment extends Fragment {
         webSettings.setUseWideViewPort(true);// wide viewport를 사용하도록 설정
         webSettings.setLoadWithOverviewMode(true);// 컨텐츠가 웹뷰보다 클 경우 스크린 크기에 맞게 조정
         // 웹뷰 멀티 터치 가능하게 (줌기능)
-        webSettings.setBuiltInZoomControls(true);// 줌 아이콘 사용
+        //webSettings.setBuiltInZoomControls(true);// 줌 아이콘 사용
         webSettings.setSupportZoom(true);
         // Force links and redirects to open in the WebView instead of in a browser
         mWebView.setWebViewClient(new WebViewClient());
