@@ -21,7 +21,7 @@
         />
     <item
         android:id="@+id/menuImsi"
-        android:icon="@drawable/meicon"
+        android:icon="@drawable/cityicon"
         android:title="임시"
         android:enabled="true"
         />

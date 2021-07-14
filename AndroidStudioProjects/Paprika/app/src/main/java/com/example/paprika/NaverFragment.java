@@ -31,7 +31,7 @@ public class NaverFragment extends Fragment {
 
         // Force links and redirects to open in the WebView instead of in a browser
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("https://www.naver.com/");
+        mWebView.loadUrl("https://www.snu.ac.kr/");
         return view;
     }
 }

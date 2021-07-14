@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
                 activity.onFragmentChange(3);
             }
         });
-        Button buttonNaver = rootView.findViewById(R.id.btn_naver);
+        Button buttonNaver = rootView.findViewById(R.id.btn_homePage);
         buttonNaver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
